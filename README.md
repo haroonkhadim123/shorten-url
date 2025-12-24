@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+URL Shortener Project
+Description
 
-## Getting Started
+The URL Shortener project is a web application that allows users to convert long URLs into shorter, more manageable links. This makes it easier to share links on social media, in emails, or in messaging apps. The project also includes functionality to track and redirect users from the short URL to the original long URL.
 
-First, run the development server:
+Key Features:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Shorten long URLs with a single click.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Redirect short URLs to the original URLs.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Simple and intuitive user interface.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Optional: analytics to track the number of times a short URL is used.
 
-## Learn More
+Problem Faced
 
-To learn more about Next.js, take a look at the following resources:
+Generating Unique Short URLs:
+Ensuring that each short URL is unique and avoiding conflicts with previously generated links was a challenge.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Handling Invalid URLs:
+Users could enter URLs that were malformed or inaccessible, which could break the redirect functionality.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Database Management:
+Storing URLs efficiently and retrieving them quickly for redirection required careful design, especially to avoid duplicate entries.
 
-## Deploy on Vercel
+How I Handled These Problems
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Unique Short URLs:
+Implemented a random string generator and checked the database for existing entries before saving a new short URL.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+URL Validation:
+Added validation to ensure that users enter valid URLs. Invalid URLs are rejected with an error message.
+
+Database Optimization:
+Used a simple database schema with indexing on the short URL field for faster retrieval. Optional caching can be added for high traffic.
+
+Tech Stack
+
+Frontend: Next.js, React, Tailwind CSS 
+
+Backend: Next.js API Routes
+
+Database: MongoDB / MySQL / SQLite
+
+Optional: TailwindCSS for UI
+
+Future Improvements
+
+Add user accounts to manage URLs.
+
+Include analytics dashboard for tracking clicks.
+
+Implement custom short URLs.
+
+Add expiration time for short URLs.
