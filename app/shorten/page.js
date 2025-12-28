@@ -1,5 +1,7 @@
 "use client"
+import Link from "next/link"
 import React, { useState } from "react"
+
 
 export default function Page() {
   const [url, seturl] = useState("")
@@ -7,7 +9,8 @@ export default function Page() {
   const [generate, setgenerate] = useState("")
 
   const generated = async (e) => {
-    e.preventDefault() // ✅ prevent form/page reload
+    e.preventDefault()
+    setgenerate('') // ✅ prevent form/page reload
     try {
       const response = await fetch("/api/generate", {
         method: "POST",
@@ -16,12 +19,23 @@ export default function Page() {
       })
 
       const result = await response.json()
-      console.log("Response:", result)
-
-      seturl("")
+      
+        seturl("")
       setshorturl("")
-      setgenerate(`${process.env.NEXT_PUBLIC_HOST || "http://localhost:3000"}/${shorturl}`)
-      alert(result.message)
+      if(result.success){
+         setgenerate(`${url}/${shorturl}`)
+         alert(result.message)
+         return
+
+      }
+      else{
+        alert(result.message)
+        return
+      }
+
+     
+     
+     
     } catch (error) {
       console.error("Frontend error:", error)
     }
@@ -55,8 +69,9 @@ export default function Page() {
         <button type="submit" className="bg-purple-500 py-2.5 px-1.5 text-white">
           Generate
         </button>
+         {generate &&(<Link href={generate}>{generate}</Link>)}
       </form>
-      {generate && <code className="mx-auto mt-3">Your link: {generate}</code>}
+    
     </div>
   )
 }
