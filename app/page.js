@@ -24,7 +24,7 @@ export default function Home() {
 
       {/* Features Section */}
       <section className="py-20 bg-white w-full">
-        <div className="max-w-7xl mx-auto px-6 text-center">
+        <div className="max-w-7xl mx-auto px-6 text-center dark:text-white">
           <h2 className="text-3xl md:text-4xl font-bold mb-12">Why Choose Bitlink?</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="p-6 border rounded-xl hover:shadow-lg transition">
@@ -45,7 +45,7 @@ export default function Home() {
 
       {/* How It Works Section */}
       <section className="py-20 bg-purple-50 w-full">
-        <div className="max-w-7xl mx-auto px-6 text-center">
+        <div className="max-w-7xl mx-auto px-6 text-center dark:text-white">
           <h2 className="text-3xl md:text-4xl font-bold mb-12">How It Works</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             <div className="p-6 bg-white rounded-xl shadow hover:shadow-lg transition">
@@ -66,7 +66,7 @@ export default function Home() {
 
       {/* Testimonials Section */}
       <section className="py-20 bg-white w-full">
-        <div className="max-w-7xl mx-auto px-6 text-center">
+        <div className="max-w-7xl mx-auto px-6 text-center dark:text-white">
           <h2 className="text-3xl md:text-4xl font-bold mb-12">What Our Users Say</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="p-6 border rounded-xl shadow hover:shadow-lg transition">
@@ -83,7 +83,7 @@ export default function Home() {
 
       {/* Call to Action Section */}
       <section className="py-20 bg-purple-500 w-full text-white">
-        <div className="max-w-7xl mx-auto px-6 text-center">
+        <div className="max-w-7xl mx-auto px-6 text-center dark:text-white">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to shorten your links?</h2>
           <p className="mb-6">Start using Bitlink today and make your links memorable and trackable.</p>
           <Link className="p-3 rounded-xl bg-white text-purple-500 font-bold hover:bg-gray-100 transition" href="/shorten">Get Started</Link>

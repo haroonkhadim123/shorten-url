@@ -56,7 +56,7 @@ export default function Page() {
         className="mx-auto bg-purple-100 p-4.5 py-5 md:w-[500px] w-[90%] flex flex-col gap-2.5 rounded-md"
       >
         <input
-          className="bg-white py-2.5 px-1.5 focus:outline-purple-500"
+          className="bg-white dark:text-white py-2.5 px-1.5 focus:outline-purple-500"
           type="text"
           name="url"
           value={url}
@@ -65,7 +65,7 @@ export default function Page() {
           required
         />
         <input
-          className="bg-white py-2.5 px-1.5 focus:outline-purple-500"
+          className="bg-white dark:text-white py-2.5 px-1.5 focus:outline-purple-500"
           type="text"
           name="shorturl"
           value={shorturl}

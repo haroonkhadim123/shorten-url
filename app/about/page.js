@@ -20,7 +20,7 @@ export default function About() {
       </section>
 
       {/* Our Story Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white dark:text-white">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Story</h2>
           <p className="text-gray-600 md:text-lg mb-6">
@@ -33,7 +33,7 @@ export default function About() {
       </section>
 
       {/* Mission & Vision Section */}
-      <section className="py-20 bg-purple-50">
+      <section className="py-20 bg-purple-50 dark:text-white">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           <div>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Mission</h2>
@@ -51,7 +51,7 @@ export default function About() {
       </section>
 
      {/* Team Section */}
-<section className="py-20 bg-white">
+<section className="py-20 bg-white dark:text-white">
   <div className="max-w-7xl mx-auto px-6 text-center">
     <h2 className="text-3xl md:text-4xl font-bold mb-12">Meet the Team</h2>
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
@@ -93,7 +93,7 @@ export default function About() {
 
 
       {/* Call to Action Section */}
-      <section className="py-20 bg-purple-500 w-full text-white text-center">
+      <section className="py-20 bg-purple-500 w-full text-white text-center dark:text-white">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Join Bitlink Today</h2>
           <p className="mb-6 text-lg md:text-xl">Shorten your links, track analytics, and share them effortlessly. Start now!</p>
