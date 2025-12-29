@@ -8,7 +8,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="grid grid-cols-1 md:grid-cols-2 h-[60vh] bg-purple-100 w-full">
         <div className="h-full flex flex-col justify-center items-start gap-6 p-10">
-          <p className="font-bold text-4xl md:text-5xl dark:text-white">
+          <p className="font-bold text-4xl md:text-5xl dark:text-gray-600">
             {"Best URL Shortener in the Market"}
           </p>
           <p className="text-gray-600 md:text-lg px-2">

@@ -76,7 +76,7 @@ export default function Page() {
         <button type="submit" className="bg-purple-500 py-2.5 px-1.5 text-white">
           {loader ? "Generating...": "Generate"}
         </button>
-         {generate &&(<Link className="dark:text-white" href={generate}>{generate}</Link>)}
+         {generate &&(<Link className="dark:text-white text-black" href={generate}>{generate}</Link>)}
       </form>
     
     </div>
