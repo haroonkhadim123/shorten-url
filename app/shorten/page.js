@@ -7,11 +7,13 @@ export default function Page() {
   const [url, seturl] = useState("")
   const [shorturl, setshorturl] = useState("")
   const [generate, setgenerate] = useState("")
+  const [loader, setloader] = useState(false)
 
   const generated = async (e) => {
     e.preventDefault()
     setgenerate('') // ✅ prevent form/page reload
     try {
+      setloader(true)
       const response = await fetch("/api/generate", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -39,6 +41,8 @@ export default function Page() {
      
     } catch (error) {
       console.error("Frontend error:", error)
+    } finally{
+      setloader(false)
     }
   }
 
@@ -70,7 +74,7 @@ export default function Page() {
           required
         />
         <button type="submit" className="bg-purple-500 py-2.5 px-1.5 text-white">
-          Generate
+          {loader ? "Generating...": "Generate"}
         </button>
          {generate &&(<Link href={generate}>{generate}</Link>)}
       </form>
