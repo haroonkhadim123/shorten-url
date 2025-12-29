@@ -23,7 +23,7 @@ export default function Home() {
             </Link>
             <Link
               className="p-3 rounded-xl bg-gray-800 text-white hover:bg-gray-900 transition"
-              href="https://github.com/your-repo"
+              href="https://github.com/haroonkhadim123/shorten-url.git"
               target="_blank"
             >
               {"GitHub"}
