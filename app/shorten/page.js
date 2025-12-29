@@ -20,11 +20,12 @@ export default function Page() {
 
       const result = await response.json()
       
-        seturl("")
-      setshorturl("")
+    
       if(result.success){
          setgenerate(`${url}/${shorturl}`)
          alert(result.message)
+             seturl("")
+      setshorturl("")
          return
 
       }
@@ -42,6 +43,8 @@ export default function Page() {
   }
 
   return (
+  <>
+  <div className="h-[70vh]">
     <div className="mt-14 flex flex-col gap-2.5 w-[100%]">
       <h1 className="font-bold text-2xl text-center">Generate Short URL</h1>
       <form
@@ -73,5 +76,7 @@ export default function Page() {
       </form>
     
     </div>
+    </div>
+    </>
   )
 }
