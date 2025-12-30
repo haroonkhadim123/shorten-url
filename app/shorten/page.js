@@ -8,10 +8,12 @@ export default function Page() {
   const [shorturl, setshorturl] = useState("")
   const [generate, setgenerate] = useState("")
   const [loader, setloader] = useState(false)
+  const [link, setlink] = useState("")
 
   const generated = async (e) => {
     e.preventDefault()
-    setgenerate('') // ✅ prevent form/page reload
+    setgenerate('')
+    setlink('')// ✅ prevent form/page reload
     try {
       setloader(true)
       const response = await fetch("/api/generate", {
@@ -24,7 +26,8 @@ export default function Page() {
       
     
       if(result.success){
-         setgenerate(`${url}/${shorturl}`)
+         setgenerate(shorturl)
+        setlink(link)
          alert(result.message)
              seturl("")
       setshorturl("")
@@ -76,7 +79,7 @@ export default function Page() {
         <button type="submit" className="bg-purple-500 py-2.5 px-1.5 text-white">
           {loader ? "Generating...": "Generate"}
         </button>
-         {generate &&(<Link className="dark:text-white text-black" href={generate}>{generate}</Link>)}
+         {generate &&(<Link className="dark:text-white text-black" href={link}>{generate}</Link>)}
       </form>
     
     </div>
