@@ -27,7 +27,7 @@ export default function Page() {
     
       if(result.success){
          setgenerate(shorturl)
-        setlink(link)
+        setlink(url)
          alert(result.message)
              seturl("")
       setshorturl("")
